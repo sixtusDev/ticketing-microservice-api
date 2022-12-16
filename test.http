@@ -1,0 +1,31 @@
+# Signup
+POST https://ticketing.dev/api/users/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test@email.com",
+    "password": "Password123"
+}
+
+###
+
+# Signin
+POST https://ticketing.dev/api/users/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test@email.com",
+    "password": "Password123"
+}
+
+###
+
+# Current user
+GET https://ticketing.dev/api/users/currentuser HTTP/1.1
+
+###
+
+# Sign out
+GET https://ticketing.dev/api/users/signout HTTP/1.1
+
+
