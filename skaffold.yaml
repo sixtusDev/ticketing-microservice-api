@@ -8,11 +8,19 @@ build:
   local:
     push: false
   artifacts:
-    - image: sixtusdev/auth
+    - image: cygnetops/auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
-          - dest: .
-            src: "src/**/*.ts"
+          - src: "src/**/*.ts"
+            dest: .
+    - image: cygnetops/ticketing-client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "**/*.js"
+            dest: .
